@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LearnM4th</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    </head>
+    <body>
+        <div class="main-courses">
+            <div id="main-courses">
+                <div id="h1-Courses">
+                    <h1>Course</h1>
+                </div>
+                <div class="row">
+                    <!-- Course Section -->
+                    <div class="courses-col">
+                        <h1>An</h1>
+                        <p>Analisis Numerik</p>
+                        <a href="#title-courses-Annum"> Pelajari lebih lanjut</a>
+                    </div>
+                    <div class="courses-col">
+                        <h1>Ar</h1>
+                        <p>Analisis Riil</p>
+                        <a href="#title-courses-Anriil"> Pelajari lebih lanjut</a>
+                    </div>
+                    <div class="courses-col">
+                        <h1>Pm</h1>
+                        <p>Matematika Diskrit</p>
+                        <a href="#title-courses-Matdisk"> Pelajari lebih lanjut</a>
+                    </div>
+                </div>
+            </div>
+            <div id="title-courses-Annum">
+                <h1>Analisis Numerik</h1>
+            </div>
+            <div class="Annum">
+                <div class="listmaterialAnnum">
+                    <h3>1. Akar-akar Persamaan Nonlinear</h3>
+                    <p id="pip1"><b>Definisi :</b><br> Suatu akar dari suatu fungsi f(x) adalah nilai r sedemikian rupa sehingga nilai fungsi
+                        f(x) = 0, walaupun turunan fungsi itu tidak nol pada nilai r atau f'(r) &#8800; 0<br>
+                    </p>
+                    <P id="pip2"><b>Contoh :</b><br>
+                        Misalkan diketahui f(x) = 6x&#178; − 7x + 2 dapat diuraikan menjadi f(x) = (2x − 1)(3x − 2),
+                        sehingga akar dari persamaan ini adalah x = 1/2 dan x = 2/3. karena f(1/2) = 0 dan f(3/2) = 0. 
+                        Walaupun f'(1/2) &#8800; 12(1/2) − 7 = −1
+                    </P>
+                    <p id="pip3"><b>Teorema Eksistensi Solusi </b><br>
+                        Apabila f(x) kontinu pada interval [a, b] dan bila f(a).f (b)< 0, maka paling tidak ada satu
+                        akar real r&#8712;[a, b] yang membuat f(r) = 0.
+                    </p>
+                    <p id="pip4"><b>Teorema Ketunggalan Solusi</b><br>
+                        Apabila f(x) dapat diturunkan dan turunannya f'(x) memiliki tanda yang tetap dalam interval [a, b], 
+                        maka dapat dipastikan bahwa hanya ada satu akar real dalam interval tersebut.
+                    </p>
+                    <p id="pip5"><b>Contoh</b><br>
+                        Fungsi f(x) = x&#179; + 4x&#178; − 10 memiliki nilai f(1) = −5 dan f(2) = 14 
+                        sehingga ada akar real di antara [1, 2]. Lebih lanjut turunan f(x) adalah
+                        f'(x) = 3x&#178; + 8x sehingga f'(1) = 11 dan f'(2) = 28. 
+                        Karena tandanya tetap (sama-sama positif) maka hanya ada satu akar f(x) dalam interval [1, 2].
+                    </p>
+                    <p id="pip6"><b>Titik awal iterasi</b><br>
+                        1. Metode numerik pencarian akar persamaan non linier memerlukan nilai awal sebagai akar pendekatan<br>
+                        2. Nilai awal bisa dicari dengan cara trial-error, dengan menghitung nilai fungsi di beberapa titik 
+                        lalu memilih nilai f(x) yang paling mendekati nol.<br>
+                        3. Seringkali cara trial-error tidak berhasil karena setelah dicoba beberapa kali, titik yang dicari belum ditemukan
+                    </p>
+                    <p id="pip7"><b>Aturan Descrates</b><br>
+                        Andaikan f(x) berderajat n dan u adalah banyaknya perubahan tanda dari koefisien f(x), 
+                        u<sub>1</sub> adalah banyaknya perubahan tanda dari koefisien f(−x), <i>m</i> adalah banyaknya akar
+                        positif dari f(x) = 0, <i>m<sub>1</sub></i> adalah banyaknya akar negatif dari f(x) = 0, maka :<br>
+                        i. Jika u + u<sub>1</sub> < n, maka persamaan <i>f(x) = 0</i> mempunyai paling sedikit (n − (u + u<sub>1</sub>) akar kompleks<br>
+                        ii. Jika semua akar dari f(x) = 0 adalah bilangan real, maka <i>m = u</i> dan <i>m<sub>1</sub> = u<sub>1</sub></i>
+                    </p>
+                    <h2>2. Metode Pencarian Akar Persamaan Non Linier</h2>
+                    <p id="pip9"><b>1. Metode Bisection</b><br>
+                        Metode bisection berbasis pada Teorema Nilai Tengah
+                        <i>(intermediate value theorem)</i> dan teorema eksistensi dengan Mencari titik tengah antara dua titik
+                        perkiraan, sehingga biasa disebut <i>binary search method</i>. <br>
+                        Andaikan f(x) adalah persamaan nonlinier yang kontinu dalam interval [a, b] dan f(a).f(b) < 0, maka di antara a dan b terdapat akar
+                        .Akar tersebut dianggap akar unik di antara a dan b.
+                    </p>
+                    <p id="pip10"><b>2. Metode Secant</b><br>
+                        Laju konvergensi lebih cepat dari Metode Bisection karena menggunakan titik potong antara 
+                        garis yang menghubungkan (a, f(a)) dengan (b, f(b)) terhadap sumbu x sebagai titik coba berikutnya.
+                        Kemudian Nilai a = p<sub>0</sub> dan b = p<sub>1</sub>. Sedangkan titik berikutnya, 
+                        p<sub>2</sub> adalah titik potong dari garis (a, f(a)) − (b, f(b)) terhadap sumbu x, dst.
+                    </p>
+                    <p id="pip11"><b>3. Metode Regula falsi</b><br>
+                        Metode regula falsi merupakan gabungan antara Bisection dan Secant yang memerlukan dua titik awal, a dan b
+                        sedemikian sehingga f(a).f(b) < 0. Metode ini menggunakan garis yang dibentuk oleh (a, f(a)) dengan (b, f(b)) yang
+                        dikaitkan dengan <b>titik potong sumbu-x</b> dan garis yang dibentuk kedua titik tersebut.
+                    </p>
+                    <p id="pip12"><b>4. Metode Newton Rapshon</b><br>
+                        Metode newton Rapshon sangat cepat konvergen dari pada metode-metode sebelumnya. Metode ini mensyaratkan fungsi f(x) dapat
+                        differensiabel pada suatu interval tertentu. Untuk memulai iterasi, hanya memerlukan satu titik awal untuk memulai iterasinya.
+                    </p>
+                </div>
+            </div>
+            <div id="title-courses-Anriil">
+                <h1>Analisis Riil</h1>
+            </div>
+            <div class="Anriil">
+                <div class="listmaterialAnriil">
+                    <h3>Bilangan Riil</h3>
+                    <p id="chan1"><b>Definisi:</b><br>
+                        Bilangan rasional merupakan bilangan yang dinyatakan sebagai perbandingan dua bilangan bulat a dan b, ditulis a/b dengan syarat b≠0. 
+                        Bilangan rasional juga memiliki batasan yaitu terdapat pada selang (-∞,∞).
+                    </p>
+                    <p id="chan2"><b>Sifat-sifat bilangan riil pada penjumlahan</b><br>
+                        Pada himpunan R dari bilangan-bilangan riil terdapat dua operasi biner yang dilambangkan dengan (+) dan (.) 
+                        dimana masing-masing disebut penjumlahan dan perkalian. Operasi-operasi itu memenuhi sifat-sifat sebagai berikut:<br>
+                        <b>(A1)</b> (sifat komutatif pada penjumlahan) a + b = b + a, untuk setiap a, b di R<br>
+                        <b>(A2)</b> (sifat asosiatif pada  penjumlahan) (a + b) + c = a + (b + c), untuk setiap a, b, c di R <br>
+                        <b>(A3)</b> (keberadaan/eksistensi sebuah elemen nol)
+                        Terdapat sebuah elemen 0 di R sedemikian hingga 0 + a = a dan a + 0 = a, untuk setiap a di R<br>
+                        <b>(A4)</b> (keberadaan/eksistensi elemen negatif) Untuk setiap a di R terdapat sebuah elemen – a di R  
+                        sedemikian hingga a + (-a) = 0 dan (-a) + a = 0
+                    </p>
+                    <p id="chan3"><b>Sifat-sifat bilangan riil pada perkalian</b><br>
+                        <b>(M1)</b> (sifat komutatif dari perkalian) a.b = b.a, untuk setiap a, b di R <br>
+                        <b>(M2)</b> (sifat asosiatif dari perkalian)  (a.b).c = a.(b.c), untuk setiap a, b, c di R<br>
+                        <b>(M3) </b>(keberadaan/eksistensi sebauh elemen satuan) Terdapat sebuah elemen 1 di R yang berbeda dengan 0 
+                        sedemikian hingga 1.a = a dan a.1 = a<br>
+                        <b>(M4)</b> (keberadaan/eksistensi elemen kebalikan pada perkalian) untuk setiap a  0 di R terdapat sebuah elemen di R 
+                        sedemikian hingga a. = 1 dan  .a = 1 <br>
+                        <b>(D1)</b> (sifat distributif kiri dari perkalian terhadap penjumlahan) a.(b + c) = (a.b) + (a.c), untuk setiap a, b, c di R<br>
+                        <b>(D2)</b> (sifat distributif kanan dari perkalian  terhadap penjumlahan) (b + c).a = (b.a) + (c.a), untuk setiap a, b, c di R<br>
+                    </p>
+                    <p id="chan4"><b>Teorema I</b><br> 
+                        <b>(a)</b> Jika z, a &#8712; R sedemikian hingga z + a = a, maka z = 0.  <br> 
+                        <b>(b)</b> Jika u, b &#8712; R dan b &#8800; 0  sedemikian hingga jika u.b = b maka u = 1.
+                    </p>
+                    <p id="chan5"><b>Teorema II</b><br> 
+                        <b>(a)</b> Jika a, b  &#8712; R, sedemikian hingga a + b = 0, maka b = -a.<br> 
+                        <b>(b)</b> Jika a, b  &#8712; R dan a &#8800; 0, sedemikian hingga ab = 1 maka b=1/b.
+                    </p>
+                    <p id="chan6"><b>Teorema III</b><br>
+                        Misalkan a, b &#8712; R sembarang. Maka 
+                        <b>(a)</b> Persamaan a + x = b mempunyai penyelesaian tunggal x = (-a) + b.<br> 
+                        <b>(b)</b> Jika a &#8800; 0, persamaan a.x = b mempunyai penyelesaian tunggal x = 1/a.b.               
+                    </p>
+                    <p id="chan7"><b>Teorema IV (Penggunaan Sifat Distributif)</b><br>
+                        Misalkan a &#8712; R sembarang. Maka <br> 
+                        <b>(a)</b> a.0=0<br> 
+                        <b>(b)</b> (-1).a = -a<br>
+                        <b>(c)</b> -(-1) = 1<br>
+                        <b>(d)</b> (-1)(-1)=1              
+                    </p>
+                    <p id="chan8"><b>Teorema V (Hasil penting dari sifat aljabar)</b><br>
+                        Misalkan a,b,c &#8712; R sembarang. Maka <br>
+                        <b>(a)</b> Jika a &#8800; 0,  maka 1/a &#8800; 0 dan 1/(1/a) = a.<br>
+                        <b>(b)</b> Jika a.b = a.c, a &#8800; 0 maka b = c<br>
+                        <b>(c)</b> Jika a.b = 0, maka a = 0 atau b = 0         
+                    </p>
+                </div>
+            </div>
+            <div id="title-courses-Matdisk">
+                <h1>Matematika Diskrit</h1>
+            </div>
+            <div class="Matematika-Diskrit">
+                <div class="listmaterialMatdisk">
+                    <h3>Kombinatorial</h3>
+                    <p id="Mathdisk1"><b>Definisi :</b><br>
+                    Cabang matematika yang mempelajari pengaturan objek objek (jumlah cara
+                    pengaturan objek objek tertentu di dalam himpunannya).<br>
+                    Misalkan : “ Nomor plat mobil di negara X terdiri atas 5 angka diikuti dengan 2 huruf.
+                    Angka pertama tidak boleh 0 . Berapa banyak nomor plat mobil yang dapat dibuat?<br>
+                    <b>Cara menyelesaikan :</b><br>
+                    1. Enumerasi (dicacah atau dihitung) satu per satu setiap kemungkinan <br>
+                    2. Kaidah dasar menghitung<br>
+                    3. Teknik kombinatorial (permutasi atau kombinasi) <br>
+                    </p>
+                    <p id="Mathdisk2"><b>Percobaan</b><br>
+                        1. Melempar dadu. <i>Outcome :</i> sisi dadu teratas menunjukkan 1,2,3,4,5 , atau 6<br>
+                        2. Melempar koin uang Rp 1000. <i>Outcome</i> : Sisi koin bagian atas menunjukkan angka atau gambar<br>
+                        3. Memilih lima orang wakil dari 100 orang mahasiswa. <i>Outcome</i> : : himpunan pasangan 5 wakil mahasiswa dengan jumlah 
+                    </p>
+                    <p id="Mathdisk3"><b>Kaidah dasar menghitung</b><br>
+                        Percobaan 1 mempunyai 𝑝kemungkinan kejadian <br>
+                        Percobaan 2 mempunyai 𝑞kemungkinan kejadian<br>
+                        <b>Kaidah perkalian (rule of product)</b><br>
+                        1. Kedua percobaan dilakukan secara simultan/serentak.<br>
+                        2. Banyak kemungkinan kejadian saat percobaan 1 dan percobaan 2 dilakukan sebanyak 𝑝×𝑞kemungkinan kejadian<br>
+                        <b>Kaidah penjumlahan (rule of sum)</b><br>
+                        1. Kedua percobaan dilakukan tidak simultan/serentak.
+                        2. Banyak kemungkinan kejadian saat percobaan 1 atau percobaan 2 dilakukan sebanyak 𝑝+𝑞kemungkinan kejadian
+                    </p>
+                    <p id="Mathdisk4"><b>Perluasan Kaidah Menghitung</b><br>
+                        Jika 𝑛 buah percobaan masing masing mempunyai 𝑝<sub>1</sub>,𝑝<sub>2</sub>,…,𝑝<sub>n </sub>hasil percobaan
+                        yang mungkin terjadi di mana setiap 𝑝<sub>i </sub> tidak bergantung pada pilihan sebelumnya, maka jumlah hasil percobaan yang mungkin terjadi adalah <br>
+                        <b>a.</b> 𝑝<sub>1</sub> × p<sub>2</sub> ×⋯× 𝑝 <sub>n</sub> untuk kaidah perkalian<br>
+                        <b>b.</b> 𝑝<sub>1</sub> + p<sub>2</sub> +⋯+ 𝑝 <sub>n</sub> untuk kaidah penjumlahan
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
